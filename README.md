@@ -1,2 +1,3 @@
 # Java-Practice
-Java Practice 
+Java Practice,
+Challenges and solutions
