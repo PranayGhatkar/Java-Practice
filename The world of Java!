@@ -1,0 +1,20 @@
+Problem 1: 
+Welcome to the world of Java! In this challenge
+
+Statement:
+Print Hello, World. on the first line.
+Print Hello, Java. on the second line.
+
+Sample Output
+Hello, World.
+Hello, Java.
+
+Solution:
+public class Solution {
+
+    public static void main(String[] args) {
+        System.out.println("Hello, World.");
+        System.out.println("Hello, Java.");
+    }
+}
+
