@@ -49,7 +49,7 @@ public class Solution {
            }
            } 
            catch (Exception e){
-               System.out.println("java.lang.Exception: "+e.getMessage());
+             System.out.println(e.getClass().getName() + ": "+ e.getMessage());
            }
             
         }
