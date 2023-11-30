@@ -1,0 +1,78 @@
+Problem 11: 
+Date and Time in Java 
+
+Statement:
+The Calendar class is an abstract class that provides methods for converting between a specific instant in time and a set of calendar fields such as YEAR, MONTH, DAY_OF_MONTH, HOUR, and so on, and for manipulating the calendar fields, such as getting the date of the next week.
+
+Ref: https://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html
+
+You are given a date. You just need to write the method, getDay, which returns the day on that date.
+
+Example: 
+Month: 8
+Day: 14 
+Year: 2017
+
+The method should return Monday as the day that date.
+
+Function Description:
+findDay has the following parameters:
+
+int: month
+int: day
+int: year
+Returns
+
+string: the day of the week in capital letters
+Input Format
+
+A single line of input containing the space separated month, day and year, respectively, in MM DD YYYY format.
+
+Sample Input:
+08 05 2015
+
+Sample Output:
+WEDNESDAY
+
+Explanation
+The day on August 5th 2015 was WEDNESDAY.
+
+Solution:
+import java.io.*;
+import java.util.*;
+
+
+  class Result {
+
+
+    public static String finDay(int month,int day, int year){
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month -1, day);//month is 0-based in calender class
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+
+        //Mapping day of week values to their string representations
+        String [] daysOfWeek ={"", "SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"};
+        return daysOfWek[dayOfWeek];
+
+        }
+}
+
+public class Solution {
+  public static void  main(String[] args) throws IOException{
+      BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+      BufferedWriter bufferedWriter = new bufferedWriter (new FileWriter(System.getenv ("OUTPUT_PATH")));
+      String [] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+      int month = Integer.parseInt(firstMultipleInput[0]);
+      int day = Integer.parseInt(firstMultipleInput[1]);
+      int year =Intger.parseInt(firstMultipleInput[2]);
+
+      String res = Result.findDay(month, day, year);
+
+      bufferedWriter.write(res);
+      bufferedWriter.newLine();
+
+      bufferedReader.close();
+      bufferedWriter.close(); 
+    }
+}
