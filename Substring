@@ -1,0 +1,29 @@
+Problem 14:
+Substring 
+
+Statement:
+The given string s and 2 indices start and end print a sabstring consisting of all charcters in the inclusive range ftom strat and end-1
+
+Sample input:
+HelloWorld
+3 7
+
+Sample output:
+lowo
+
+Solution:
+
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String S = in.next();
+        int start = in.nextInt();
+        int end = in.nextInt();
+        
+        String SubString = S.substring(start, end);
+        System.out.println(SubString);
+    }
+}
