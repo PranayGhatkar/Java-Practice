@@ -2,7 +2,7 @@
 Java Practice,
 Challenges and solutions
 
-
+------------------------------------------------------
 Problem 1:The world of Java!
 Problem 2:if-else conditional statements
 Problem 3:Read an integer, a double, and a String
@@ -16,4 +16,4 @@ Problem 10:Int to String
 Problem 11:Date and Time
 Problem 12:Currency Formatter
 Problem 13:
-
+------------------------------------------------------
