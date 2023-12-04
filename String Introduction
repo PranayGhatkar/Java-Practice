@@ -1,0 +1,62 @@
+Problem 13:
+String Introduction
+
+Statemet:
+"A string is traditionally a sequence of characters, either as a literal constant or as some kind of variable." 
+Wikipedia: String (computer science) https://en.wikipedia.org/wiki/String_%28computer_science%29
+
+The elements of a String are called characters. 
+The number of characters in a String is called the length, and it can be retrieved with the String.length() method.
+
+Given two strings of lowercase English letters, S1 and S2, perform the following operations:
+ 1. Sum the lengths S1 of S2 and .
+ 2. Determine if S1 is lexicographically larger than S2 (i.e.: does S2 come before S1 in the dictionary?).
+ 3. Capitalize the first letter in S1 and S2 and print them on a single line, separated by a space.
+
+Sample Input:
+hello
+java
+
+Sample Output:
+9
+No
+Hello Java
+
+Solution:
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+ 
+
+    public static void main(String[] args) {
+        
+                Scanner sc = new Scanner(System.in);
+        String s1 = sc.next();
+        String s2 = sc.next();
+       
+
+        // Sum the lengths of s1 and s2
+        int lengthSum = s1.length() + s2.length();
+
+        // Determine if s1 is lexicographically greater than s2
+        boolean isS1Greater = s1.compareTo(s2) > 0;
+
+        // Capitalize the first letter in s1 and s2
+        String capitalizedS1 = s1.substring(0, 1).toUpperCase() + s1.substring(1);
+        String capitalizedS2 = s2.substring(0, 1).toUpperCase() + s2.substring(1);
+
+        // Print the output
+        System.out.println(lengthSum);
+        System.out.println(isS1Greater ? "Yes" : "No");
+        System.out.println(capitalizedS1 + " " + capitalizedS2);
+
+
+    }
+}
+
+
+
+
+
