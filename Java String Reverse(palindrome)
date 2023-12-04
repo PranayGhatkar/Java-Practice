@@ -1,0 +1,39 @@
+Problem 16: 
+Java String Reverse(palindrome)
+
+Statement:
+A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward.
+
+Sample Input:
+madam
+
+Sample Output:
+Yes
+
+Solution:
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        
+        StringBuilder reverseStr = new StringBuilder();
+        
+        for (int i = A.length() - 1; i >=0; i-- ){
+            reverseStr.append(A.charAt(i));
+        }
+        if (reverseStr.toString().equals(A)){
+            System.out.println("Yes");    
+        }
+        else {
+            System.out.println("No");
+        }
+    }
+}
+
+
+
